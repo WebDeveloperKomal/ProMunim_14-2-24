@@ -332,7 +332,7 @@ table {
     font-weight: 700;
     line-height: 44px;
     letter-spacing: 0em;
-    text-align: center;
+    text-align: left;
 }
 
 .table td {
@@ -342,7 +342,7 @@ table {
     font-weight: 700;
     line-height: 44px;
     letter-spacing: 0em;
-    text-align: center;
+    text-align: left;
 }
 
 .table-bordered td,
@@ -404,3 +404,8 @@ font-weight: 600;
 /* text-align: left; */
 
   }
+
+  
+.search{
+    border-radius: 20px;padding: 3px 20px; font-family: Comfortaa;font-size: 12px;color: #636363; font-weight: 300;
+}

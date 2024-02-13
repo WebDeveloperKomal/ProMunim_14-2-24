@@ -23,7 +23,7 @@ export class EmployeeComponent {
   dataarray: EmployeeModel[] = [];
   currentPage: number = 1;
   countries: EmployeeModel[] | undefined;
-  collectionSize =100;
+  collectionSize = 0;
   userRole:any;
   employeeForm !: FormGroup;
   employeeForm1 !: FormGroup;
@@ -190,21 +190,43 @@ export class EmployeeComponent {
   }
 
 
+// applyFilter(): void {
+//   const searchString = this.SearchText.toLowerCase();
+//   const filteredData = [...this.EmployeesList];
+//   this.EmployeesList = filteredData.filter((data) =>
+//     data.empCode.toLowerCase().includes(searchString) ||
+//     data.firstName.toLowerCase().includes(searchString) ||
+//     data.middleName.toLowerCase().includes(searchString) ||
+//     data.lastName.toLowerCase().includes(searchString) ||
+//     (data.contactNo !== null && !isNaN(data.contactNo) && data.contactNo.toString().includes(searchString)) ||
+//     data.branchName.toLowerCase().includes(searchString) ||
+//     data.depName.toLowerCase().includes(searchString) ||
+//     data.mainDepName.toLowerCase().includes(searchString) ||
+//     data.roleName.toLowerCase().includes(searchString) 
+//   );
+// }
+
 applyFilter(): void {
+  if (!this.SearchText) {
+    
+    this.EmployeesList = [...this.EmployeesList];
+    return;
+  }
   const searchString = this.SearchText.toLowerCase();
-  const filteredData = [...this.EmployeesList];
-  this.EmployeesList = filteredData.filter((data) =>
-    data.empCode.toLowerCase().includes(searchString) ||
+  this.EmployeesList = this.EmployeesList.filter((data) =>
+  (data.empCode !== null && !isNaN(data.empCode) && data.empCode.toString().includes(searchString)) ||
+
     data.firstName.toLowerCase().includes(searchString) ||
     data.middleName.toLowerCase().includes(searchString) ||
     data.lastName.toLowerCase().includes(searchString) ||
-    // data.contactNo.toLowerCase().includes(searchString) ||
     (data.contactNo !== null && !isNaN(data.contactNo) && data.contactNo.toString().includes(searchString)) ||
-    data.branchName.toLowerCase().includes(searchString) ||
-    data.depName.toLowerCase().includes(searchString) ||
-    data.mainDepName.toLowerCase().includes(searchString) ||
-    data.roleName.toLowerCase().includes(searchString) 
+     data.branchName.toLowerCase().includes(searchString) ||
+     data.depName.toLowerCase().includes(searchString) ||
+       data.mainDepName.toLowerCase().includes(searchString) ||
+         data.roleName.toLowerCase().includes(searchString) 
   );
+
+    
 }
 
 refreshCountries() {

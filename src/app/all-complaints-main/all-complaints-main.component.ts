@@ -29,6 +29,7 @@ export class AllComplaintsMainComponent {
   viewRM!:boolean;
   viewbranch!:boolean;
   viewall!:boolean;
+  router: any;
 
 
   constructor(private formBuilder: FormBuilder , private api : ApiService) {
@@ -88,5 +89,9 @@ refreshCountries() {
   // this.countries = this.dataarray
   //   .map((country, i) => ({id: i + 1, ...country}))
   //   .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
+}
+
+edit(id:any){
+  this.router.navigate(['/set/view-customer-complaints-main/'+id]);
 }
 }

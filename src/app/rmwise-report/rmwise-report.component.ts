@@ -20,7 +20,7 @@ export class RMWiseReportComponent {
   RmwiseReport: RmWiseModel[] = [];
   currentPage: number = 1;
   // countries: RmWiseModel[] | undefined;
-  collectionSize =100;
+  collectionSize = 0;
   constructor(private formBuilder: FormBuilder,private apiService: ApiService) {
   
 }

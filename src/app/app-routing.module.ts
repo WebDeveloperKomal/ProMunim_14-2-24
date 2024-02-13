@@ -66,7 +66,8 @@ import { SetComponent } from './set/set.component';
 import { ViewBranchComponent } from './view-branch/view-branch.component';
 import { AuthGuard } from './auth.guard';
 import { ViewComplianceComponent } from './view-compliance/view-compliance.component';
-import { ViewCustomerDetailsNewComponent } from './view-customer-details-new/view-customer-details-new.component';
+// import { ViewCustomerDetailsNewComponent } from './view-customer-details-new/view-customer-details-new.component';
+
 
 const routes: Routes = [
 
@@ -206,7 +207,7 @@ const routes: Routes = [
     
     { path: "allcomplaintsmain", component: AllComplaintsMainComponent , canActivate:[AuthGuard] },
     { path: "add-customer-complaints", component: AddCustomerComplaintsMainComponent , canActivate:[AuthGuard]},
-    { path: "view-customer-complaints-main", component: ViewCustomerComplaintsMainComponent , canActivate:[AuthGuard] },
+    { path: "view-customer-complaints-main/:id", component: ViewCustomerComplaintsMainComponent , canActivate:[AuthGuard] },
     
     //remaining copy
     // { path: "view-complain-details", component: ViewComplaintDetailsComponent },
@@ -229,8 +230,7 @@ const routes: Routes = [
     
     { path: "change-password", component: ChangePasswordComponent , canActivate:[AuthGuard] },
 
-
-         
+    
     ],
   },
 

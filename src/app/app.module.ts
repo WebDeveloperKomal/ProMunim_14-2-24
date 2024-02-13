@@ -79,6 +79,7 @@ import { AuthInterceptorProviders } from './auth.interceptor';
 import{CarouselModule} from 'ngx-bootstrap/carousel'
 import { DatePipe } from '@angular/common';
 import { ViewCustomerDetailsNewComponent } from './view-customer-details-new/view-customer-details-new.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -149,7 +150,8 @@ import { ViewCustomerDetailsNewComponent } from './view-customer-details-new/vie
     SetComponent,
     LoginComponent,
     ViewBranchComponent,
-    ViewCustomerDetailsNewComponent
+    ViewCustomerDetailsNewComponent,
+   
   ],
   imports: [
     BrowserModule,

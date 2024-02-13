@@ -61,5 +61,9 @@ body {
 
 .border-secondary {
     --bs-border-opacity: 1;
-    /* border-color: rgba(var(--bs-secondary-rgb),var(--bs-border-opacity))!important; */
+    /* bo
+    rder-color: rgba(var(--bs-secondary-rgb),var(--bs-border-opacity))!important; */
 }
+
+
+
