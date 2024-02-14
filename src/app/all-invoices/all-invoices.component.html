@@ -28,7 +28,7 @@
           <li class="breadcrumb-item active" aria-current="page">All Invoices</li>
         </ol>
       </nav> -->
-      <div class="container ">
+      <div class="container-fluid ">
         <div class="row">
           <div class="col">
             <div class="page-header">
@@ -41,7 +41,7 @@
 </div>
 
 
-            <div class="container pb-2">
+            <div class="container-fluid pb-2">
 
                 <form [formGroup]="invoiceSearch" class=" col-md-12 col-sm-12 col-xs-12">
                   <div class="row">
@@ -113,13 +113,13 @@
             </div>
 
             
-            <div class="container " *ngIf="showtable">
+            <div class="container-fluid " *ngIf="showtable">
               <div class="row">
                 <div class="col">
                   
                   <div id="branch_datatable_wrapper" class="dataTables_wrapper no-footer">
                     <div class="row">
-                      <div class="col-lg-9 col-md-8">
+                      <div class="col-xl-10 col-lg-9 col-md-8">
                         <div class="dataTables_length" id="branch_datatable_length">
                           <p>Show
                             <select name="branch_datatable_length" (ngModelChange)="refreshCountries()" [(ngModel)]="pageSize"
@@ -134,7 +134,7 @@
                           </p>
                         </div>
                       </div>
-                      <div class="col-lg-3 col-md-4 col-8">
+                      <div class="col-xl-2 col-lg-3 col-md-4 col-8">
                       <p><input class="w-100 search" type="text"  [(ngModel)]="SearchText"
                         (input)="applyFilter()" placeholder="search" aria-controls="branch_datatable">
                         <!-- <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: relative; top : -28px ; right: -90%">

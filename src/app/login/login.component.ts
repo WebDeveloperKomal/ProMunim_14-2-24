@@ -3,6 +3,7 @@ import { SecurityService } from '../security.service';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { UserModel } from '../user-profile/userModel';
+import { AuthiServiceService } from '../authi-service.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent {
   showPassword : boolean = false;
   credentials={email:'',password:''};
 
-  constructor(private service:SecurityService, private router:Router){}
+  constructor(private service:SecurityService, private router:Router, private serv : AuthiServiceService){}
 
   ngOnInit(){
   }
@@ -30,6 +31,7 @@ export class LoginComponent {
         // localStorage.setItem('loginStatus','1');
         // localStorage.setItem('token',response.jwtToken);
         // localStorage.setItem('token',response.jwtToken);
+        this.serv.isauthenticated = true;
         this.router.navigate(["set/"]); 
         const Toast = Swal.mixin({
           toast: true,

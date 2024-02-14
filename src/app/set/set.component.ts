@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AuthiServiceService } from '../authi-service.service';
+import {NavigationEnd, Router, Event  } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-set',
@@ -14,5 +17,19 @@ export class SetComponent {
     // this.toggleSubmenu = this.toggleSubmenu === '230px' ? '0px' : '230px'
     this.sidenavCollapsed = !this.sidenavCollapsed;
     // this.closeAllDropdowns();
+  }
+  constructor(private serv : AuthiServiceService, private router : Router) { }
+  ngOnInit() {
+    if(!this.serv.isauthenticated){
+      this.router.navigate(["set/"])
+    }
+
+    // this.router.events.pipe(
+    //   filter((event) => event instanceof NavigationEnd)
+    // ).subscribe((event: NavigationEnd) => {
+    //    const currentRoute = event.urlAfterRedirects;
+    //   console.log('Current Route:', currentRoute);
+    // });
+
   }
 }

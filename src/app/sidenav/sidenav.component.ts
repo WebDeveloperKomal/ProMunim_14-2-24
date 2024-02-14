@@ -34,17 +34,11 @@ export class SidenavComponent {
  setActiveLink(link: string) {
    this.activeLink = link;
    this.isSubMenuOpen = true;
-  
-   // if (link === '') {
-   //   this.activeLink = '';
-   //   this.setActiveLink('/set/branch');
-   // }
  }
  showsidenavfull(){
    this.sidenavStatus = !this.sidenavStatus
  }
  toggleSidenav() {
-   // Update the width based on the current width
    this.sidenavWidth = this.sidenavWidth === '45px' ? '230px' : '45px';
    this.togglewidth = this.togglewidth === '80px' ? '442px' : '80px';
    this.toggleSubmenu = this.toggleSubmenu === '230px' ? '0px' : '230px'

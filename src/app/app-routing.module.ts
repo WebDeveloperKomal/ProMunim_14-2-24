@@ -78,16 +78,13 @@ const routes: Routes = [
     ],
   },
 
-
-
-
-  
   {
     path: 'set',
     component: SetComponent, 
     children: [
       {
         path : 'header' , component : HeaderComponent , canActivate:[AuthGuard]
+       
       },
       {
         path : 'user-profile' , component : UserProfileComponent , canActivate:[AuthGuard]
@@ -227,10 +224,9 @@ const routes: Routes = [
     { path: "newsalert", component: NewsAlertComponent  , canActivate:[AuthGuard]},
     { path: "add-news-alert", component: AddNewsAlertComponent , canActivate:[AuthGuard] },
     { path: "view-news-alert/:id", component: ViewNewsAlertComponent , canActivate:[AuthGuard] },
-    
     { path: "change-password", component: ChangePasswordComponent , canActivate:[AuthGuard] },
 
-    
+  
     ],
   },
 
