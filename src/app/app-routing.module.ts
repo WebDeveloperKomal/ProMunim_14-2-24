@@ -72,9 +72,9 @@ import { ViewComplianceComponent } from './view-compliance/view-compliance.compo
 const routes: Routes = [
 
 
-  { path: '', component: LoginComponent, // Use the LoginLayoutComponent for the login page
+  { path: '', component: LoginComponent, 
     children: [ { path: '', component: LoginComponent },
-      // {path: 'forgot-password' , component: ChangePasswordComponent}
+     
     ],
   },
 

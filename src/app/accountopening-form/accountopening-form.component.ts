@@ -340,8 +340,9 @@ onchange(event: any){
     console.log("tid :::::: " + this.tidToSearch);
     this.apiservice.TidDetails(this.tidToSearch).subscribe(
       (res: any) => {
+        console.log("sonaaaaaaaaa*************",this.tidToSearch);
         this.tempCustData = res.data;
-        console.log(this.tempCustData);
+        console.log("sona*************",res.data);
         this.AOF1.tid = this.tempCustData.tid;
         // this.AOF2.tid = this.tempCustData.tid;
         this.AOF1.branchid = this.tempCustData.branchId;
@@ -408,7 +409,7 @@ onchange(event: any){
   }
 
   onsubmit2() {
-    // console.log("AOF2 ::::::: ", this.step2.value, this.photo, this.sign);
+    console.log("AOF2 ::::::: ", this.step2.value, this.photo, this.sign);
     this.apiservice.aof2Form(this.step2.value, this.photo, this.sign).subscribe(
       (response: any) => {
         const Toast = Swal.mixin({

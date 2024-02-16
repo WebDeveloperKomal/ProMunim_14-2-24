@@ -1,4 +1,4 @@
-.breadcrumb {
+/* .breadcrumb {
     background-color: #F5F5F5;
     position: relative;
     z-index: auto;
@@ -17,9 +17,38 @@ text-align: left;
 
 .breadcrumb a {
     text-decoration: none;
+    
    }
 .breadcrumb i{
     color: #3BB161;
+} */
+
+
+.breadcrumb {
+    background-color: #F5F5F5;
+    position: relative;
+    z-index: auto;
+    background-color: #F5F5F5;
+    padding-left: 10px;
+    margin-bottom: 0px !important;
+    font-size: 10px;
+    color: #333;
+    font-family: Comfortaa;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.breadcrumb i {
+    color: #3BB161;
+    margin-right: 5px;
 }
 
 

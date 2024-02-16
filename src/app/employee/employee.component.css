@@ -49,10 +49,12 @@ h1 {
 
 .breadcrumb a {
     text-decoration: none;
+    margin-right: 5px;
 }
 
 .breadcrumb i {
     color: #3BB161;
+    margin-right: 5px;
 }
 
 

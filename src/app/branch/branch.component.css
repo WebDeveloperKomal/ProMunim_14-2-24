@@ -51,9 +51,11 @@ text-align: left;
 
 .breadcrumb a {
     text-decoration: none;
+    margin-right: 5px;
 }
 .breadcrumb i{
     color: #3BB161;
+    margin-right: 5px;
 }
 
 #branch_datatable_wrapper .dataTables_length select {

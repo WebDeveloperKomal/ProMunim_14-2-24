@@ -44,17 +44,19 @@ h1 small {
     font-family: Comfortaa;
     font-size: 12px;
     font-weight: 700;
-    line-height: 36px;
+    /* line-height: 36px; */
     letter-spacing: 0em;
     text-align: left;
 }
 
 .breadcrumb a {
     text-decoration: none;
+    margin-right: 5px;
 }
 
 .breadcrumb i {
     color: #3BB161;
+    /* margin-right: 5px; */
 }
 .dash {
     font-family: Comfortaa;
@@ -151,6 +153,8 @@ h1 small {
     font-size: 10px !important;
     font-weight: 700;
     color: #151515;
+
+    
 
 }
 

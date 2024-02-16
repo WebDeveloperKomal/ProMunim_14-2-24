@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AllCOmplaintsMainModel } from './all-complaints-main.component.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-all-complaints-main',
   templateUrl: './all-complaints-main.component.html',
@@ -29,10 +30,10 @@ export class AllComplaintsMainComponent {
   viewRM!:boolean;
   viewbranch!:boolean;
   viewall!:boolean;
-  router: any;
+  // router: any;
 
 
-  constructor(private formBuilder: FormBuilder , private api : ApiService) {
+  constructor(private formBuilder: FormBuilder , private api : ApiService, private router:Router) {
     // this.employeeForm = this.formBuilder.group({
     //   location: ['', Validators.required], // Add validation if needed
     //   maindepartment: ['', Validators.required], // Add validation if needed
